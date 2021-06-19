@@ -13,4 +13,4 @@ var t,e=arguments[3];!function(e,n){"object"==typeof exports&&"undefined"!=typeo
 },{"@pnotify/core":"txz9","@pnotify/core/dist/BrightTheme.css":"xSVp","./fetchRequests":"jYRN"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/main");
 },{"./sass/main.scss":"clu1","./js/main":"d6sW"}]},{},["Focm"], null)
-//# sourceMappingURL=/astro-team-project/src.116b3066.js.map
+//# sourceMappingURL=/astro-team-project/src.6e63cec5.js.map
