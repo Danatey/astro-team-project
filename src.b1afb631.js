@@ -29,4 +29,4 @@ module.exports=[{name:"Andrii",surname:"Lanyk",photo1:"https://encrypted-tbn0.gs
 },{"./teamAPI.json":"prZX","../templates/createTeamAnimation.hbs":"G5ka"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/header"),require("./js/main"),require("./js/pagination.js"),require("./js/modalTeam.js");
 },{"./sass/main.scss":"clu1","./js/header":"cGsR","./js/main":"d6sW","./js/pagination.js":"o8lo","./js/modalTeam.js":"fDFk"}]},{},["Focm"], null)
-//# sourceMappingURL=/astro-team-project/src.8773a728.js.map
+//# sourceMappingURL=/astro-team-project/src.b1afb631.js.map
