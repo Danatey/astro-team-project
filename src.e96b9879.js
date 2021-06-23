@@ -11,7 +11,7 @@ var t,e=arguments[3];!function(e,n){"object"==typeof exports&&"undefined"!=typeo
 },{}],"xEVc":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.API_KEY=void 0;const e="1ca3db2e1e1b7285b1391876caf4be93";exports.API_KEY=e;
 },{}],"jYRN":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.fetchTrending=r,exports.fetchSearchMovie=n,exports.fetchMovieDetails=o;var e=require("./main"),t=require("./API_KEY");function r(t,r){return fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${t}&page=${r}`).then(e=>e.json()).catch(e.onError)}function n(t,r,n){return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${t}&language=en-US&page=${r}&include_adult=false&query=${n}`).then(e=>e.json()).catch(e.onError)}function o(r){return fetch(`https://api.themoviedb.org/3/movie/${r}?api_key=${t.API_KEY}&language=en-US`).then(e=>e.json()).catch(e.onError)}
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.fetchTrending=r,exports.fetchSearchMovie=n,exports.fetchMovieDetails=o;var e=require("./main"),t=require("./API_KEY");function r(t,r){return fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=${t}&page=${r}`).then(e=>e.json()).catch(e.onError)}function n(t,r,n){return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${t}&language=en-US&page=${r}&include_adult=false&query=${n}`).then(e=>e.json()).catch(e.onError)}function o(r){return fetch(`https://api.themoviedb.org/3/movie/${r}?api_key=${t.API_KEY}&language=en-US`).then(e=>e.json()).catch(e.onError)}
 },{"./main":"d6sW","./API_KEY":"xEVc"}],"pAws":[function(require,module,exports) {
 var define;
 var global = arguments[3];
@@ -52,4 +52,4 @@ const e=document.querySelector(".hide-form"),t=document.querySelector(".order-ti
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/header"),require("./js/main"),require("./js/pagination.js"),require("./js/modalTeam.js"),require("./js/loader.js"),require("./js/onImageClick.js"),require("./js/btnBackToTop.js"),require("./js/annoying.js"),require("./js/addToQueue.js"),require("./js/addToWatched.js"),require("./js/renderQueue.js"),require("./js/needFilm.js");
 },{"./sass/main.scss":"clu1","./js/header":"cGsR","./js/main":"d6sW","./js/pagination.js":"o8lo","./js/modalTeam.js":"fDFk","./js/loader.js":"vQE2","./js/onImageClick.js":"baMN","./js/btnBackToTop.js":"y9vW","./js/annoying.js":"tgyT","./js/addToQueue.js":"MJp8","./js/addToWatched.js":"VU9G","./js/renderQueue.js":"OL4a","./js/needFilm.js":"VZZW"}]},{},["Focm"], null)
-//# sourceMappingURL=/astro-team-project/src.bad4c94b.js.map
+//# sourceMappingURL=/astro-team-project/src.e96b9879.js.map
