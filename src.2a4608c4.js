@@ -56,4 +56,4 @@ module.exports="/astro-team-project/astro-team.e7bb081c.png";
 },{"./fetchRequests.js":"jYRN","../templates/filmCardDetail.hbs":"kSqa","../images/astro-team.png":"GStW"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/header"),require("./js/loader"),require("./js/needFilm"),require("./js/modalTeam"),require("./js/annoying"),require("./js/renderPopularSection"),require("./js/renderWatched"),require("./js/renderQueue"),require("./js/btnBackToTop"),require("./js/btnClearLibrary"),require("./js/addToQueue"),require("./js/addToWatched"),require("./js/onImageClick");
 },{"./sass/main.scss":"clu1","./js/header":"cGsR","./js/loader":"vQE2","./js/needFilm":"VZZW","./js/modalTeam":"fDFk","./js/annoying":"tgyT","./js/renderPopularSection":"B6ML","./js/renderWatched":"EzPL","./js/renderQueue":"OL4a","./js/btnBackToTop":"y9vW","./js/btnClearLibrary":"DMNP","./js/addToQueue":"MJp8","./js/addToWatched":"VU9G","./js/onImageClick":"baMN"}]},{},["Focm"], null)
-//# sourceMappingURL=/astro-team-project/src.aa426efd.js.map
+//# sourceMappingURL=/astro-team-project/src.2a4608c4.js.map
