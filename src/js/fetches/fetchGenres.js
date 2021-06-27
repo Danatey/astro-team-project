@@ -8,7 +8,5 @@ function fetchMovieGenres () {
     .then(response =>  {
         return response.json()
     })
-    .catch(onError);
+    .catch('onError');
 }
-
-export { fetchMovieGenres };
