@@ -1,11 +1,12 @@
-import { fetchMovieDetails } from './fetches/fetchRequests';
+import { fetchMovieDetails, typeOfCinema } from './fetches/fetchRequests';
 import { onLoader, stopLoader } from './main/loader';
 import libraryCardTpl from '../templates/library-card.hbs';
+
 
 const paginationPageList = document.querySelector('[data-library-pagination]');
 const elBtnQueue = document.querySelector('[data-queue-header');
 const listOfMovie = document.querySelector('.js-gallery');
-const queryToGet = 'queue';
+const queryToGet = `queue${typeOfCinema}`;
 
 elBtnQueue.addEventListener('click', getQueueId);
 const savedItems = JSON.parse(localStorage.getItem(queryToGet));
@@ -34,13 +35,13 @@ function getQueueId() {
       document.documentElement.clientWidth < 769 &&
       document.documentElement.clientWidth > 468
     ) {
-      cardOnPage = 2;
+      //cardOnPage = 2;
       countOfButtons = createCountOfButtons(cardOnPage);
       createButtonsArray(countOfButtons);
       showPage(buttons[0]);
       renderPageOnButtonClick(buttons);
     } else if (document.documentElement.clientWidth < 469) {
-      cardOnPage = 1;
+      //cardOnPage = 1;
       countOfButtons = createCountOfButtons(cardOnPage);
       createButtonsArray(countOfButtons);
       showPage(buttons[0]);

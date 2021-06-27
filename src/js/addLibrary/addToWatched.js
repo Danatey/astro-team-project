@@ -1,13 +1,14 @@
+import {typeOfCinema} from '../fetches/fetchRequests';
 const addToWatchedBtnRef = document.querySelector('[data-popup="backdrop"]');
 
 addToWatchedBtnRef.addEventListener('click', onWatchedClick);
 
-let itemsInWatched = JSON.parse(localStorage.getItem('watched'));
+let itemsInWatched = JSON.parse(localStorage.getItem(`watched${typeOfCinema}`));
 
-if (JSON.parse(localStorage.getItem('watched')) === null) {
+if (JSON.parse(localStorage.getItem(`watched${typeOfCinema}`)) === null) {
   itemsInWatched = [];
 } else {
-  itemsInWatched = JSON.parse(localStorage.getItem('watched'));
+  itemsInWatched = JSON.parse(localStorage.getItem(`watched${typeOfCinema}`));
 }
 
 function onWatchedClick(e) {
@@ -23,17 +24,17 @@ function onWatchedClick(e) {
       itemsInWatched.splice(indexOfEl, 1);
 
       if (itemsInWatched.length === 0) {
-        localStorage.removeItem('watched');
+        localStorage.removeItem(`watched${typeOfCinema}`);
         return
     }
     
-      localStorage.setItem('watched', JSON.stringify(itemsInWatched));
+      localStorage.setItem(`watched${typeOfCinema}`, JSON.stringify(itemsInWatched));
       return;
     }
  
   itemsInWatched.push(elementId);
   const uniqueItems = unique(itemsInWatched);
-  localStorage.setItem('watched', JSON.stringify(uniqueItems));
+  localStorage.setItem(`watched${typeOfCinema}`, JSON.stringify(uniqueItems));
   buttonWatched.textContent = "DELETE FROM WATCHED";
   
   return;
