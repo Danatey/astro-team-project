@@ -1,13 +1,15 @@
+import {typeOfCinema} from '../fetches/fetchRequests';
 const addToQueueBtnRef = document.querySelector('[data-popup="backdrop"]')
 
 addToQueueBtnRef.addEventListener('click', onQueueClick);
 
-let itemsInQueue = JSON.parse(localStorage.getItem('queue'));
+let itemsInQueue = JSON.parse(localStorage.getItem(`queue${typeOfCinema}`));
 
-if (JSON.parse(localStorage.getItem('queue')) === null) {
+if (JSON.parse(localStorage.getItem(`queue${typeOfCinema}`)) === null) {
+    console.log(1);
     itemsInQueue = [];
 } else {
-    itemsInQueue = JSON.parse(localStorage.getItem('queue'))
+    itemsInQueue = JSON.parse(localStorage.getItem(`queue${typeOfCinema}`))
 };
 
 
@@ -25,17 +27,17 @@ function onQueueClick(e) {
       itemsInQueue.splice(indexOfEl, 1);
 
     if (itemsInQueue.length === 0) {
-        localStorage.removeItem('queue');
+        localStorage.removeItem(`queue${typeOfCinema}`);
         return
     }
 
-      localStorage.setItem('queue', JSON.stringify(itemsInQueue));
+      localStorage.setItem(`queue${typeOfCinema}`, JSON.stringify(itemsInQueue));
       return;
     }
 
     itemsInQueue.push(elementId)
     const uniqueItems = unique(itemsInQueue);
-    localStorage.setItem('queue', JSON.stringify(uniqueItems));
+    localStorage.setItem(`queue${typeOfCinema}`, JSON.stringify(uniqueItems));
     buttonQueue.textContent = "DELETE FROM QUEUE";
 };
 

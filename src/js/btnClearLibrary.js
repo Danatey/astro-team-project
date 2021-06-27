@@ -1,4 +1,4 @@
-
+import {typeOfCinema} from './fetches/fetchRequests';
 const gallerySectionEl = document.querySelector('.js-gallery');
 const libraryContRef = document.querySelector('.library-js');
 const homeContRef = document.querySelector('.home-js');
@@ -21,11 +21,11 @@ homeContRef.addEventListener('click', removeBtnClearLibrary)
 // Function button
 
 function clearWatchedLib() {
-    localStorage.removeItem('watched');
+    localStorage.removeItem(`watched${typeOfCinema}`);
 }
 
 function clearQueueLib() {
-    localStorage.removeItem('queue');
+    localStorage.removeItem(`queue${typeOfCinema}`);
 }
 
 function clearGallery() {

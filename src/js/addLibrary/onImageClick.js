@@ -1,9 +1,10 @@
-import * as apiFetchRequest from '../fetches/fetchRequests';
+import {fetchMovieDetails, typeOfCinema} from '../fetches/fetchRequests';
 import imageCardsTpl from '../../templates/filmCardDetail.hbs';
 import image from '../../images/astro-team.png';
 
-let itemsInWatched = JSON.parse(localStorage.getItem('watched'));
-let itemsInQueue = JSON.parse(localStorage.getItem('queue'));
+let itemsInWatched = JSON.parse(localStorage.getItem(`watched${typeOfCinema}`));
+console.log(itemsInWatched);
+let itemsInQueue = JSON.parse(localStorage.getItem(`queue${typeOfCinema}`));
 
 const listOfMovie = document.querySelector('.js-gallery');
 const body = document.querySelector('body');
@@ -13,7 +14,7 @@ const popUp = document.querySelector('[data-popup="backdrop"]');
 listOfMovie.addEventListener('click', onDisplayBigImg);
 
 function fetchMovieById(id, type) {
-  apiFetchRequest.fetchMovieDetails(id, type).then(movie => {
+  fetchMovieDetails(id, type).then(movie => {
     const markup = renderFilmCard(movie);
     return markup;
   });

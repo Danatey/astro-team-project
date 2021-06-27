@@ -5,9 +5,7 @@ function fetchTrending(key, page) {
     .then(response => {
       return response.json();
     })
-      //этот then для показа результата
-      .then(mov => console.log(mov))
-      //
+      
     .catch('onError');
 }
 fetchTrending(API_KEY,1)
