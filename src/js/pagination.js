@@ -24,11 +24,6 @@ function createSectionTrending(key, page) {
 
 function createSectionSearch(key, page, query) {
   res.fetchSearchMovie(key, page, query).then(movies => {
-    if (!movies.results.length) {
-      console.log('alarm')
-      gallery.innerHTML = `<img width="100%" src=${image}/>`;
-      return
-    }
     addedGenres(movies, genresList);
     gallery.innerHTML = cardTpl(movies.results);
     stopLoader()

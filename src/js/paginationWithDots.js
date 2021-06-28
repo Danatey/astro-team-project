@@ -24,7 +24,6 @@ function createGallerySection(key, page) {
 function createSectionOnSearch(key, page, query) {
   res.fetchSearchMovie(key, page, query).then(movies => {
     if (!movies.results.length) {
-      console.log('alarm');
       gallery.innerHTML = `<img width="100%" src=${image}/>`;
       return;
     }
@@ -48,7 +47,7 @@ function addedGenres(movies, genresList) {
     return;
   }
   for (let i = 0; i < 20; i += 1) {
-    if (movies.results[i].genre_ids.length === 0) {
+    if (!movies.results[i] || movies.results[i].genre_ids.length === 0) {
       return;
     }
     const movieResult = movies.results[i].genre_ids;
@@ -72,8 +71,10 @@ function createDotsPagination(
   let moviesOnPage = quantityOfMoviesOnPage;
 
   let numberOfPages = Math.ceil(totalMovies / moviesOnPage);
-
-  if (numberOfPages === 1) {
+  if (!numberOfPages) {
+      gallery.innerHTML = `<img width="100%" src=${image}/>`;
+      return;
+  } else if (numberOfPages === 1) {
     if (movies) {
       gallery.innerHTML = createLibraryGallery(movies);
     } else {
