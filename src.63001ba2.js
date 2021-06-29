@@ -92,4 +92,4 @@ module.exports=function(t){return fetch(t).then(function(t){return t.text()})};
 },{}],0:[function(require,module,exports) {
 var b=require("TUK3");b.register("html",require("A3BY"));b.load([["dedpool.c1c5b1fa.html","UBIp"]]).then(function(){require("Focm");});
 },{}]},{},[0], null)
-//# sourceMappingURL=/astro-team-project/src.a66270a0.js.map
+//# sourceMappingURL=/astro-team-project/src.63001ba2.js.map
